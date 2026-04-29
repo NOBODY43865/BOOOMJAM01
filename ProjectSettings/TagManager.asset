@@ -11,10 +11,10 @@ TagManager:
   - groundLayer
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - groundLayer1
+  - groundLayer2
+  - groundLayer3
+  - player
   - 
   - 
   - 
