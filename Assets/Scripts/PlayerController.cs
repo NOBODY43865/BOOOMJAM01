@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
     [Header("移动设置")]
     public float moveSpeed = 8f;
-    public float jumpForce = 16f;
+    public float jumpForce = 10f;
 
     [Header("地面检测")]
     public Transform groundCheck;
