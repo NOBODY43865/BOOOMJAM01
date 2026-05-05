@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         // 检测碰撞对象是移动平台（标签为Platform）
-        if (other.gameObject.CompareTag("Platform"))
+        if (other.gameObject.CompareTag("Platform") || other.gameObject.CompareTag("Ground"))
         {
             // 关键：将玩家设为平台的子物体 → 自动跟随移动
             _platformParent = other.transform;
@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other)
     {
         // 玩家离开平台 → 取消父子关系
-        if (other.gameObject.CompareTag("Platform"))
+        if (other.gameObject.CompareTag("Platform") || other.gameObject.CompareTag("Ground"))
         {
             transform.SetParent(null);
             _platformParent = null;
